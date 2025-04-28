@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/api/v1.0/predict', methods=['GET']')
+@app.route('/api/v1.0/predict', methods=['GET'])
 def predict(): 
     q = request.args.to_dict()
     if len(q) == 0 or len(q)==1:
