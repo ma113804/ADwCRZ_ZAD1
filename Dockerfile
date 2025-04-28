@@ -1,4 +1,4 @@
-FROM python:3.11-slim-buster as builder
+FROM python:3.11-slim-buster import builder
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
