@@ -1,10 +1,10 @@
-FROM python:3.11-slim-buste as builder
+FROM python:3.11-slim-buster as builder
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
  
 # Użyj innego obrazu dla obrazu końcowego
-FROM python:3.11-slim-buste
+FROM python:3.11-slim-buster
 WORKDIR /app
 # Skopiuj zależności z obrazu budującego
 COPY --from=builder /app /app
