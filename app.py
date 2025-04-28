@@ -12,7 +12,13 @@ def mojastrona():
         num1 = 0
         num2 = 0
         pred = 0
-        pred_dict = {"prediction":pred,"features": [num1,num2]}
+        pred_dict = {
+        'prediction': pred,
+        'features': {
+            'num1': num1,
+            'num2': num2
+        }
+    }
         return jsonify(pred_dict)
     else:
         num1 = float(q["num1"])
@@ -21,7 +27,13 @@ def mojastrona():
             pred2 = 1
         else:
             pred2=0
-        pred_dict2 = {"prediction":pred2,"features": [num1,num2]}
+        pred_dict2 = pred_dict = {
+        'prediction': pred2,
+        'features': {
+            'num1': num1,
+            'num2': num2
+        }
+    }
         return jsonify(pred_dict2)
         
 
