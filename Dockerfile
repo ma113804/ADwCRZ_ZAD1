@@ -1,7 +1,5 @@
 FROM python:3.11-slim-buste as builder
- 
- WORKDIR /app
- 
+WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
  
