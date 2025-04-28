@@ -6,7 +6,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Użyj innego obrazu dla obrazu końcowego
-FROM python3.11-slim
+FROM python3.11-slim-buster
 WORKDIR /app
 # Skopiuj zależności z obrazu budującego
 COPY --from=builder /app /app
