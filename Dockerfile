@@ -1,4 +1,4 @@
-FROM python:3.11-slim as builder
+FROM python:3 as builder
  
  WORKDIR /app
  
@@ -6,7 +6,7 @@ FROM python:3.11-slim as builder
  RUN pip install -r requirements.txt
  
  # Użyj innego obrazu dla obrazu końcowego
- FROM python3.11-slim
+ FROM python3
  WORKDIR /app
  # Skopiuj zależności z obrazu budującego
  COPY --from=builder /app /app
